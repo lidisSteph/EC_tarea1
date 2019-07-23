@@ -10,15 +10,15 @@ var bVRegx = /([\w]{3}) - ([\w]{3})/
 
 var app = express()
 
-process.env.PORT = process.env.PORT || 8001;
+app.listen(process.env.PORT || 9001)
 
 app.use(express.static("public"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
  
-http.createServer(app).listen(8001, () => {
-  console.log('Server started at http://localhost:8001');
+http.createServer(app).listen(9001, () => {
+  console.log('Server started at http://localhost:9001');
 });
 
 
